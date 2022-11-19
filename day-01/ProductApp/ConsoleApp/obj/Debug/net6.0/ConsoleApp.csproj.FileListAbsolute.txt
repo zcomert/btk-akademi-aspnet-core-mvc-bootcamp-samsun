@@ -1,0 +1,15 @@
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.exe
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.deps.json
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.runtimeconfig.json
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.dll
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\bin\Debug\net6.0\ref\ConsoleApp.dll
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.pdb
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.csproj.AssemblyReference.cache
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.AssemblyInfoInputs.cache
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.AssemblyInfo.cs
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.csproj.CoreCompileInputs.cache
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.dll
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\obj\Debug\net6.0\ref\ConsoleApp.dll
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.pdb
+D:\dotnetmvcbootcamp\day-01\ProductApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.genruntimeconfig.cache
