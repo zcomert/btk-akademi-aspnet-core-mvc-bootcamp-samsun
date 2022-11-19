@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnetmvcbootcamp\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj": {}
+    "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj": {}
   },
   "projects": {
-    "D:\\dotnetmvcbootcamp\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj": {
+    "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnetmvcbootcamp\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj",
+        "projectUniqueName": "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj",
         "projectName": "ProductApp",
-        "projectPath": "D:\\dotnetmvcbootcamp\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj",
+        "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj",
         "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnetmvcbootcamp\\day-01\\ProductApp\\ProductApp\\obj\\",
+        "outputPath": "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ProductApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -57,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.111\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

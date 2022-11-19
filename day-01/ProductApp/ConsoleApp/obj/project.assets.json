@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dotnetmvcbootcamp\\day-01\\ProductApp\\ConsoleApp\\ConsoleApp.csproj",
+      "projectUniqueName": "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ConsoleApp\\ConsoleApp.csproj",
       "projectName": "ConsoleApp",
-      "projectPath": "D:\\dotnetmvcbootcamp\\day-01\\ProductApp\\ConsoleApp\\ConsoleApp.csproj",
+      "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ConsoleApp\\ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-      "outputPath": "D:\\dotnetmvcbootcamp\\day-01\\ProductApp\\ConsoleApp\\obj\\",
+      "outputPath": "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.111\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
