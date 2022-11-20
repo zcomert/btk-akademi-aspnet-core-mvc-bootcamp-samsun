@@ -5,7 +5,17 @@
       "ProjectGuid": "1a8293f3-c86c-4f58-846d-a2e6b0bc0aa1",
       "DisplayName": "ProductApp",
       "ColorIndex": 0
+    },
+    "81e0c499-a01b-42b3-b32e-842fe11e7cda": {
+      "ProjectGuid": "81e0c499-a01b-42b3-b32e-842fe11e7cda",
+      "DisplayName": "ConsoleApp",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
