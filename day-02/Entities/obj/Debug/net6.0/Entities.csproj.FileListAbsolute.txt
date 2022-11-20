@@ -1,0 +1,12 @@
+D:\dotnetmvcbootcamp\day-02\Entities\bin\Debug\net6.0\Entities.deps.json
+D:\dotnetmvcbootcamp\day-02\Entities\bin\Debug\net6.0\Entities.dll
+D:\dotnetmvcbootcamp\day-02\Entities\bin\Debug\net6.0\ref\Entities.dll
+D:\dotnetmvcbootcamp\day-02\Entities\bin\Debug\net6.0\Entities.pdb
+D:\dotnetmvcbootcamp\day-02\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
+D:\dotnetmvcbootcamp\day-02\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnetmvcbootcamp\day-02\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+D:\dotnetmvcbootcamp\day-02\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+D:\dotnetmvcbootcamp\day-02\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+D:\dotnetmvcbootcamp\day-02\Entities\obj\Debug\net6.0\Entities.dll
+D:\dotnetmvcbootcamp\day-02\Entities\obj\Debug\net6.0\ref\Entities.dll
+D:\dotnetmvcbootcamp\day-02\Entities\obj\Debug\net6.0\Entities.pdb
