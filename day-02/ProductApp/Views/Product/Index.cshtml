@@ -1,0 +1,9 @@
+﻿@model List<Product>
+
+@foreach(var prd in Model)
+{
+    <div class="text-center">
+        <h3>@prd.ProductName</h3>
+        <p>@prd.Price.ToString("c")</p>
+    </div>
+}

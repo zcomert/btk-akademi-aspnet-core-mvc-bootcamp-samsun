@@ -9,13 +9,12 @@ namespace ProductApp.Controllers
 
         public ProductController(RepositoryContext context)
         {
-            _context = context;
-           
+            _context = context;  
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(_context.Products.ToList());
         }
     }
 }
