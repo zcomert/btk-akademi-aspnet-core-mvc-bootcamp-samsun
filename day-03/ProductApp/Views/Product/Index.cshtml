@@ -1,0 +1,32 @@
+﻿@model List<Product>
+
+<div class="row">
+    @foreach (var prd in Model)
+    {
+       <div class="col-md-4 my-2">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" 
+                src="@prd.ImageUrl" 
+                alt="@prd.ProductName">
+                
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-8"><h5>@prd.ProductName</h5></div>
+                        <div class="col-4 text-primary">@prd.Price</div>
+                    </div>
+                    <p class="card-text">
+                        @prd.Description
+                     </p>
+                     <p class="text-info">
+                        @prd.AtCreated.Value.ToString("d")
+                     </p>
+                    <a asp-controller="Product" 
+                    asp-action="GetOneProduct"
+                    asp-route-id="@prd.Id"
+                    class="btn btn-primary">Get Details</a>
+                </div>
+            </div>
+       </div>
+    }
+</div>
+
