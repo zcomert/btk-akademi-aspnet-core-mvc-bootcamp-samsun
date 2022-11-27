@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Entities.Models;
+using Microsoft.AspNetCore.Mvc;
 using Repositories.EFCore;
 
 namespace ProductApp.Controllers
@@ -16,6 +17,23 @@ namespace ProductApp.Controllers
         {
             var categories = _context.Categories.ToList();
             return View(categories);
+        }
+
+        [HttpGet]
+        public IActionResult CreateOneCategory()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateOneCategory(Category category)
+        {
+            if (category is null)
+                throw new Exception();
+            
+            _context.Categories.Add(category);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
