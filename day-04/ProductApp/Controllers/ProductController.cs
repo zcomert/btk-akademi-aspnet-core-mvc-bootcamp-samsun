@@ -76,12 +76,17 @@ namespace ProductApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult UpdateOneProduct(Product product)
         {
-            product.AtCreated = DateTime.Now;
-            _context.Products.Update(product);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _context.Products.Update(product);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
+           
         }
 
         [HttpPost]

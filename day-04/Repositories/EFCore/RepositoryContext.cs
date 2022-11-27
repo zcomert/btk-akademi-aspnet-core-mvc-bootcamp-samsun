@@ -7,6 +7,7 @@ namespace Repositories.EFCore
     public class RepositoryContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public RepositoryContext(DbContextOptions<RepositoryContext> options)
             : base(options)
         {
@@ -16,6 +17,7 @@ namespace Repositories.EFCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ProductConfig());
+            modelBuilder.ApplyConfiguration(new CategoryConfig());
         }
     }
 }

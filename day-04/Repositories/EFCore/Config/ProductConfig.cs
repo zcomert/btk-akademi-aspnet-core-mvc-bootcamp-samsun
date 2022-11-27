@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Repositories.EFCore.Config
 {
+
     public class ProductConfig : IEntityTypeConfiguration<Product>
     {
         public void Configure(EntityTypeBuilder<Product> builder)
