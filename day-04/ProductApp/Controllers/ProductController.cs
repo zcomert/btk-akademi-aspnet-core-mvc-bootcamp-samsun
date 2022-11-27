@@ -50,12 +50,16 @@ namespace ProductApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateOneProductWithView(Product product)
         {
-            _context.Products.Add(product);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-
+            if(ModelState.IsValid)
+            {
+                _context.Products.Add(product);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
         }
 
         [HttpGet]
