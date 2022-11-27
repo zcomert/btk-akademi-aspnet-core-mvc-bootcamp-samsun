@@ -31,9 +31,13 @@ namespace ProductApp.Controllers
             if (category is null)
                 throw new Exception();
             
-            _context.Categories.Add(category);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+            if(ModelState.IsValid)
+            {
+                _context.Categories.Add(category);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
         }
 
         [HttpGet]
@@ -48,14 +52,19 @@ namespace ProductApp.Controllers
 
 
         [HttpPost]
-        public IActionResult UpdateOneCategory([Bind("CategoryId, CategoryName")] Category category)
+        public IActionResult UpdateOneCategory(Category category)
         {
             if (category is null)
                 throw new Exception();
 
-           _context.Categories.Update(category);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+            if(ModelState.IsValid)
+            {
+                _context.Categories.Update(category);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View();
         }
     }
 }
