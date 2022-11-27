@@ -1,8 +1,5 @@
-# Day - 03
-* DbContext
-* DbSet
-* EntityTypeConfiguration
-* Model Builder
-* HttpGet Request
-* HttpPost Request
+# Day - 034
+* CRUD Operations for Product and Category
 * Forms
+* Validation
+* Validation Attributes

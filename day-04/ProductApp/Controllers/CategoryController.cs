@@ -26,6 +26,7 @@ namespace ProductApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateOneCategory(Category category)
         {
             if (category is null)
@@ -52,6 +53,7 @@ namespace ProductApp.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult UpdateOneCategory(Category category)
         {
             if (category is null)
