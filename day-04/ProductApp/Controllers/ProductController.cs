@@ -74,9 +74,18 @@ namespace ProductApp.Controllers
         [HttpPost]
         public IActionResult UpdateOneProduct(Product product)
         {
+            product.AtCreated = DateTime.Now;
             _context.Products.Update(product);
             _context.SaveChanges();
-            return View("Index");
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult DeleteOneProduct(int id)
+        {
+            _context.Products.Remove(new Product() { Id=id});
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -29,6 +29,17 @@
                     asp-action="UpdateOneProduct"
                     asp-route-id="@prd.Id"
                     class="btn btn-warning">Update</a>
+
+                    <form
+                        method="post"
+                        asp-action="DeleteOneProduct"
+                        asp-controller="Product"
+                        asp-route-id="@prd.Id"
+                    >
+                        <button 
+                        type="submit" 
+                        class="btn btn-danger">Delete</button>
+                    </form>
                 </div>
             </div>
        </div>
