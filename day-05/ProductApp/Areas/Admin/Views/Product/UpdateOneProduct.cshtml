@@ -7,7 +7,7 @@
     
     <div asp-validation-summary="All" class="text-danger"></div>
 
-    <div class="form-group">
+    <div class="form-group my-3">
         <input type="text" 
         asp-for="ProductName" 
         id="ProductName" 
@@ -16,7 +16,7 @@
         <span  class="text-danger" asp-validation-for="ProductName"></span>
     </div>
 
-    <div class="form-group">
+    <div class="form-group my-3">
         <input type="text" 
         asp-for="Price" 
         id="Price" 
@@ -24,7 +24,7 @@
         class="form-control" />
     </div>
 
-    <div class="form-group">
+    <div class="form-group my-3">
         <input type="text" 
         asp-for="Description" 
         id="Description" 
@@ -32,7 +32,7 @@
         class="form-control" />
     </div>
 
-    <div class="form-group">
+    <div class="form-group my-3">
         <input type="text" 
         asp-for="ImageUrl" 
         id="ImageUrl" 
@@ -43,4 +43,10 @@
     <button 
     type="submit" 
     class="btn-primary btn">Update</button>
+</form>
+
+<form  method="post"
+        asp-action="DeleteOneProduct">
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-danger" type="submit">Delete</button>
 </form>

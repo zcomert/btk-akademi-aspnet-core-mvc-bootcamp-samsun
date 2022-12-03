@@ -43,43 +43,5 @@ namespace ProductApp.Controllers
             return RedirectToAction("Index");
         }
 
-       
-
-        
-
-        [HttpGet]
-        public IActionResult UpdateOneProduct(int id)
-        {
-            // 1. View oluştur
-            // 2. İlgili ürünü çekip View Göndermek
-            var product = _context
-                .Products
-                .Where(p => p.Id == id)
-                .SingleOrDefault();
-            
-            return View(product);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult UpdateOneProduct(Product product)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Products.Update(product);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View();
-           
-        }
-
-        [HttpPost]
-        public IActionResult DeleteOneProduct(int id)
-        {
-            _context.Products.Remove(new Product() { Id=id});
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
     }
 }
