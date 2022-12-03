@@ -5,13 +5,9 @@ using Repositories.EFCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
-builder.Services.ConfigureDbContext();
+builder.Services.ConfigureDbContext(builder.Configuration);
 
-builder.Services.AddDbContext<RepositoryContext>(options => 
-options.UseSqlServer(builder.Configuration
-.GetConnectionString("sqlconnection"),
-    prj => prj.MigrationsAssembly("ProductApp")
-));
+
 
 var app = builder.Build();
 
