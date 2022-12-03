@@ -262,3 +262,4 @@ D:\dotnetmvcbootcamp\day-05\ProductApp\obj\Debug\net6.0\ProductApp.dll
 D:\dotnetmvcbootcamp\day-05\ProductApp\obj\Debug\net6.0\ref\ProductApp.dll
 D:\dotnetmvcbootcamp\day-05\ProductApp\obj\Debug\net6.0\ProductApp.pdb
 D:\dotnetmvcbootcamp\day-05\ProductApp\obj\Debug\net6.0\ProductApp.genruntimeconfig.cache
+D:\dotnetmvcbootcamp\day-05\ProductApp\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
