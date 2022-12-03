@@ -34,3 +34,15 @@ D:\dotnetmvcbootcamp\day-04\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompil
 D:\dotnetmvcbootcamp\day-04\Entities\obj\Debug\net6.0\Entities.dll
 D:\dotnetmvcbootcamp\day-04\Entities\obj\Debug\net6.0\ref\Entities.dll
 D:\dotnetmvcbootcamp\day-04\Entities\obj\Debug\net6.0\Entities.pdb
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\bin\Debug\net6.0\Entities.deps.json
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\bin\Debug\net6.0\Entities.dll
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\bin\Debug\net6.0\Entities.pdb
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\obj\Debug\net6.0\Entities.dll
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\obj\Debug\net6.0\refint\Entities.dll
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\obj\Debug\net6.0\Entities.pdb
+F:\BTK\2022-Samsun-Kasim\github\day-05\Entities\obj\Debug\net6.0\ref\Entities.dll
