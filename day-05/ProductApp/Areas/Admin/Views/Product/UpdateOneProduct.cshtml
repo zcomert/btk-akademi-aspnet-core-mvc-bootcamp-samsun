@@ -1,4 +1,12 @@
 ﻿@model Product
+<div class="d-flex justify-content-end">
+    <form  method="post"
+            asp-action="DeleteOneProduct">
+        <input type="hidden" asp-for="Id" />
+        <button class="btn btn-danger" type="submit">Delete</button>
+        <a asp-action="Index" class="btn btn-outline-primary">Product List</a>
+    </form>
+</div>
 
 <form
     method="post"
@@ -45,8 +53,3 @@
     class="btn-primary btn">Update</button>
 </form>
 
-<form  method="post"
-        asp-action="DeleteOneProduct">
-    <input type="hidden" asp-for="Id" />
-    <button class="btn btn-danger" type="submit">Delete</button>
-</form>
