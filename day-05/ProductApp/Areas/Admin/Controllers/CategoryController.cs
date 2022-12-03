@@ -41,5 +41,33 @@ namespace ProductApp.Areas.Admin.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public IActionResult UpdateOneCategory(int id)
+        {
+            var category = _context.Categories
+                .Where(c => c.CategoryId.Equals(id))
+                .FirstOrDefault();
+
+            return View(category);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateOneCategory(Category category)
+        {
+            if (category is null)
+                throw new Exception();
+
+            if (ModelState.IsValid)
+            {
+                _context.Categories.Update(category);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
     }
 }
