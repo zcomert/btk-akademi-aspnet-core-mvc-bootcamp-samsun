@@ -1,0 +1,46 @@
+﻿@model Product
+
+<form
+    method="post"
+    asp-action="UpdateOneProduct"
+    asp-controller="Product">
+    
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <input type="text" 
+        asp-for="ProductName" 
+        id="ProductName" 
+        placeholder="Product Name"
+        class="form-control" />
+        <span  class="text-danger" asp-validation-for="ProductName"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="text" 
+        asp-for="Price" 
+        id="Price" 
+        placeholder="Price"
+        class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="text" 
+        asp-for="Description" 
+        id="Description" 
+        placeholder="Description"
+        class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="text" 
+        asp-for="ImageUrl" 
+        id="ImageUrl" 
+        placeholder="ImageUrl"
+        class="form-control" />
+    </div>
+
+    <button 
+    type="submit" 
+    class="btn-primary btn">Update</button>
+</form>
