@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj",
+      "projectUniqueName": "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj",
       "projectName": "ProductApp",
-      "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj",
+      "projectPath": "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\ProductApp\\ProductApp.csproj",
       "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-      "outputPath": "F:\\Courses\\AspDotnetCoreMVC\\Repo\\day-01\\ProductApp\\ProductApp\\obj\\",
+      "outputPath": "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\ProductApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",

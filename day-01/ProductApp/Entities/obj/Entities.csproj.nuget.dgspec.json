@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\ConsoleApp\\ConsoleApp.csproj": {}
+    "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\ConsoleApp\\ConsoleApp.csproj": {
+    "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\ConsoleApp\\ConsoleApp.csproj",
-        "projectName": "ConsoleApp",
-        "projectPath": "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\ConsoleApp\\ConsoleApp.csproj",
+        "projectUniqueName": "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-        "outputPath": "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\ConsoleApp\\obj\\",
+        "outputPath": "F:\\BTK\\2022-Samsun-Kasim\\github\\day-01\\ProductApp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
