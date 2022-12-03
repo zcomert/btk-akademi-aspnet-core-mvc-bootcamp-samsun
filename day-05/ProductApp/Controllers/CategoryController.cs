@@ -19,27 +19,7 @@ namespace ProductApp.Controllers
             return View(categories);
         }
 
-        [HttpGet]
-        public IActionResult CreateOneCategory()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult CreateOneCategory(Category category)
-        {
-            if (category is null)
-                throw new Exception();
-            
-            if(ModelState.IsValid)
-            {
-                _context.Categories.Add(category);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
+        
 
         [HttpGet]
         public IActionResult UpdateOneCategory(int id)
