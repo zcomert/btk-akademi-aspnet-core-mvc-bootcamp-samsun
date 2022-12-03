@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using ProductApp.Extensions;
 using Repositories.EFCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddControllersWithViews();
+builder.Services.ConfigureDbContext();
 
 builder.Services.AddDbContext<RepositoryContext>(options => 
 options.UseSqlServer(builder.Configuration
