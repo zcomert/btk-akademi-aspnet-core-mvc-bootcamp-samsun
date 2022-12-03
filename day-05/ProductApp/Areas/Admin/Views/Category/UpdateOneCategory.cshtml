@@ -1,4 +1,14 @@
 ﻿@model Category
+
+<div class="d-flex justify-content-end">
+    <form asp-route-id="@Model.CategoryId" method="post"
+          asp-action="DeleteOneCategory">
+        
+        <button class="btn btn-danger" type="submit">Delete</button>
+        <a asp-action="Index" class="btn btn-outline-primary">Category List</a>
+    </form>
+</div>
+
 <form 
     method="post"
     asp-action="UpdateOneCategory"

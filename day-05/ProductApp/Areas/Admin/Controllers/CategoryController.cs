@@ -69,5 +69,14 @@ namespace ProductApp.Areas.Admin.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteOneCategory(int id)
+        {
+            _context.Categories.Remove(new Category { CategoryId = id });
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
