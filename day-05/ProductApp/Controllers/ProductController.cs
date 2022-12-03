@@ -43,24 +43,9 @@ namespace ProductApp.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
-        public IActionResult CreateOneProductWithView()
-        {
-            return View();
-        }
+       
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult CreateOneProductWithView(Product product)
-        {
-            if(ModelState.IsValid)
-            {
-                _context.Products.Add(product);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
+        
 
         [HttpGet]
         public IActionResult UpdateOneProduct(int id)

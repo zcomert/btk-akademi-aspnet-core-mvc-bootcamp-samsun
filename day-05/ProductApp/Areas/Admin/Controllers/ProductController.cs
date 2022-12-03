@@ -18,5 +18,10 @@ namespace ProductApp.Areas.Admin.Controllers
             var products = _context.Products.ToList();
             return View(products);
         }
+
+        public IActionResult CreateOneProduct()
+        {
+            return View();
+        }
     }
 }
