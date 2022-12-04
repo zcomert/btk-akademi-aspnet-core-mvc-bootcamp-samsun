@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ProductApp.Extensions;
+using Repositories.Contracts;
 using Repositories.EFCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.ConfigureDbContext(builder.Configuration);
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 
 var app = builder.Build();

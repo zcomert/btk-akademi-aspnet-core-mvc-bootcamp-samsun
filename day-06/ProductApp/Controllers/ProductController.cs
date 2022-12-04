@@ -1,47 +1,28 @@
 ﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Repositories.Contracts;
 using Repositories.EFCore;
 
 namespace ProductApp.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly RepositoryContext _context;
-
-        public ProductController(RepositoryContext context)
+        private readonly IProductRepository _productRepository;
+        public ProductController(IProductRepository productRepository)
         {
-            _context = context;  
+            _productRepository = productRepository;
         }
 
         public IActionResult Index()
         {
-            var products = _context.Products.ToList();
+            var products = _productRepository.GetAllProducts();
             return View("Index",products);
         }
 
         public IActionResult GetOneProduct(int id)
         {
-            var product = _context
-                .Products
-                .Where(p => p.Id.Equals(id))
-                .SingleOrDefault();
-
+            var product = _productRepository.GetOneProductById(id);
             return View("GetOneProduct", product);
         }
-
-        public IActionResult CreateOneProduct()
-        {
-            var product = new Product();
-            product.ProductName = "Glass";
-            product.Price = 2500;
-            product.ImageUrl = "/images/products/5.jpg";
-            product.Description = "For sunny days.";
-            product.AtCreated = DateTime.Now;
-
-            _context.Products.Add(product);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
     }
 }

@@ -42,24 +42,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @if (TempData["info"] is not null)
-            {
-                <div class="alert alert-primary" role="alert">
-                    @TempData["info"]
-                </div>
-            }
-
-            <button onclick="close()" >Close</button>
-            
-            @if (TempData["success"] is not null)
-            {
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    @TempData["success"]
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            }
+            <partial name="_Notification" />
             @RenderBody()
         </main>
     </div>
