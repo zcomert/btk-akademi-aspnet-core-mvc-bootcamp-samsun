@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Entities.RequestParameters;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Contracts;
 using Repositories.EFCore;
@@ -13,9 +14,9 @@ namespace ProductApp.Controllers
             _productRepository = productRepository;
         }
 
-        public IActionResult Index()
+        public IActionResult Index([FromQuery] ProductRequestParameters p)
         {
-            var products = _productRepository.GetAllProducts();
+            var products = _productRepository.GetAllProducts(p);
             return View("Index",products);
         }
 
