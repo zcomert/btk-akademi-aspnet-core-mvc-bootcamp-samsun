@@ -1,4 +1,5 @@
-﻿using Entities.DataTransferObjects;
+﻿using AutoMapper;
+using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,10 +11,12 @@ namespace ProductApp.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly RepositoryContext _context;
+        private readonly IMapper _mapper;
 
-        public ProductController(RepositoryContext context)
+        public ProductController(RepositoryContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
@@ -37,14 +40,7 @@ namespace ProductApp.Areas.Admin.Controllers
         {
             
 
-            var product = new Product
-            {
-                ProductName = productDto.ProductName,
-                Price = productDto.Price,
-                Description = productDto.Description,
-                ImageUrl = productDto.ImageUrl,
-                CategoryId = productDto.CategoryId
-            };
+            var product = _mapper.Map<Product>(productDto);
 
             if (ModelState.IsValid)
             {

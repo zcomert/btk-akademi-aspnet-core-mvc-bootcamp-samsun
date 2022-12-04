@@ -330,3 +330,5 @@ D:\dotnetmvcbootcamp\day-06\ProductApp\obj\Debug\net6.0\ProductApp.dll
 D:\dotnetmvcbootcamp\day-06\ProductApp\obj\Debug\net6.0\ref\ProductApp.dll
 D:\dotnetmvcbootcamp\day-06\ProductApp\obj\Debug\net6.0\ProductApp.pdb
 D:\dotnetmvcbootcamp\day-06\ProductApp\obj\Debug\net6.0\ProductApp.genruntimeconfig.cache
+D:\dotnetmvcbootcamp\day-06\ProductApp\bin\Debug\net6.0\AutoMapper.dll
+D:\dotnetmvcbootcamp\day-06\ProductApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

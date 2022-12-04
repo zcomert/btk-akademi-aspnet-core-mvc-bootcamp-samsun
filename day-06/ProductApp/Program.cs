@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.ConfigureDbContext(builder.Configuration);
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 
 
 var app = builder.Build();
