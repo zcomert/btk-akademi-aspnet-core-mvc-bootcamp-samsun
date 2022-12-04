@@ -12,10 +12,8 @@
         <label for="CategoryId">Category</label>
         <select 
             asp-for="CategoryId"
+            asp-items="@ViewBag.Categories"
             class="form-control">
-            <option value="1">Computer</option>
-            <option value="2">Software</option>
-            <option value="3">Hardware</option>
         </select>
     </div>
 

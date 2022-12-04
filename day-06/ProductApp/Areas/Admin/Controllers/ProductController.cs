@@ -1,6 +1,7 @@
 ﻿using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Repositories.EFCore;
 
 namespace ProductApp.Areas.Admin.Controllers
@@ -25,6 +26,8 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult CreateOneProduct()
         {
+            var categories = _context.Categories.ToList();
+            ViewBag.Categories = new SelectList(categories,"CategoryId","CategoryName");
             return View();
         }
 
@@ -32,6 +35,8 @@ namespace ProductApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult CreateOneProduct(ProductForInsertionDto productDto)
         {
+            
+
             var product = new Product
             {
                 ProductName = productDto.ProductName,
