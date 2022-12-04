@@ -8,45 +8,45 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProductApp
 build_property.RootNamespace = ProductApp
-build_property.ProjectDir = f:\Courses\AspDotnetCoreMVC\Repo2\day-01\ProductApp\ProductApp\
+build_property.ProjectDir = F:\BTK\2022-Samsun-Kasim\github\day-01\ProductApp\ProductApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = f:\Courses\AspDotnetCoreMVC\Repo2\day-01\ProductApp\ProductApp
+build_property.MSBuildProjectDirectory = F:\BTK\2022-Samsun-Kasim\github\day-01\ProductApp\ProductApp
 build_property._RazorSourceGeneratorDebug = 
 
-[f:/Courses/AspDotnetCoreMVC/Repo2/day-01/ProductApp/ProductApp/Views/Home/GetProduct.cshtml]
+[F:/BTK/2022-Samsun-Kasim/github/day-01/ProductApp/ProductApp/Views/Home/GetProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/Courses/AspDotnetCoreMVC/Repo2/day-01/ProductApp/ProductApp/Views/Home/GetProducts.cshtml]
+[F:/BTK/2022-Samsun-Kasim/github/day-01/ProductApp/ProductApp/Views/Home/GetProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRQcm9kdWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/Courses/AspDotnetCoreMVC/Repo2/day-01/ProductApp/ProductApp/Views/Home/Index.cshtml]
+[F:/BTK/2022-Samsun-Kasim/github/day-01/ProductApp/ProductApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/Courses/AspDotnetCoreMVC/Repo2/day-01/ProductApp/ProductApp/Views/Home/Privacy.cshtml]
+[F:/BTK/2022-Samsun-Kasim/github/day-01/ProductApp/ProductApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/Courses/AspDotnetCoreMVC/Repo2/day-01/ProductApp/ProductApp/Views/Shared/Error.cshtml]
+[F:/BTK/2022-Samsun-Kasim/github/day-01/ProductApp/ProductApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/Courses/AspDotnetCoreMVC/Repo2/day-01/ProductApp/ProductApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[F:/BTK/2022-Samsun-Kasim/github/day-01/ProductApp/ProductApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/Courses/AspDotnetCoreMVC/Repo2/day-01/ProductApp/ProductApp/Views/_ViewImports.cshtml]
+[F:/BTK/2022-Samsun-Kasim/github/day-01/ProductApp/ProductApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/Courses/AspDotnetCoreMVC/Repo2/day-01/ProductApp/ProductApp/Views/_ViewStart.cshtml]
+[F:/BTK/2022-Samsun-Kasim/github/day-01/ProductApp/ProductApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/Courses/AspDotnetCoreMVC/Repo2/day-01/ProductApp/ProductApp/Views/Shared/_Layout.cshtml]
+[F:/BTK/2022-Samsun-Kasim/github/day-01/ProductApp/ProductApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7kgjt01ay0
