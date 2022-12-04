@@ -38,7 +38,7 @@ namespace ProductApp.Areas.Admin.Controllers
                 Price = productDto.Price,
                 Description = productDto.Description,
                 ImageUrl = productDto.ImageUrl,
-                CategoryId = 1
+                CategoryId = productDto.CategoryId
             };
 
             if (ModelState.IsValid)
