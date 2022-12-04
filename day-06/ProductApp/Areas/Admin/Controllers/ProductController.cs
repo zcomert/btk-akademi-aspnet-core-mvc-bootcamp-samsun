@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.DataTransferObjects;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.EFCore;
 
@@ -29,8 +30,17 @@ namespace ProductApp.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateOneProduct(Product product)
+        public IActionResult CreateOneProduct(ProductForInsertionDto productDto)
         {
+            var product = new Product
+            {
+                ProductName = productDto.ProductName,
+                Price = productDto.Price,
+                Description = productDto.Description,
+                ImageUrl = productDto.ImageUrl,
+                CategoryId = 1
+            };
+
             if (ModelState.IsValid)
             {
                 _context.Products.Add(product);
