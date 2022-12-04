@@ -9,6 +9,8 @@ namespace ProductApp.Utilities
         public MappingProfile()
         {
             CreateMap<ProductForInsertionDto, Product>();
+            CreateMap<ProductForUpdateDto, Product>().ReverseMap();
+         
         }
     }
 }

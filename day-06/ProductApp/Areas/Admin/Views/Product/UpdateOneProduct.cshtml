@@ -1,4 +1,5 @@
-﻿@model Product
+﻿@model ProductForUpdateDto
+
 <div class="d-flex justify-content-end">
     <form method="post"
           asp-action="DeleteOneProduct">
@@ -13,6 +14,13 @@
       asp-controller="Product">
 
     <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <select 
+        class="form-control"
+        asp-for="CategoryId" 
+        asp-items="@ViewBag.Categories"></select>
+    </div>
 
     <div class="form-group my-3">
         <input type="text"

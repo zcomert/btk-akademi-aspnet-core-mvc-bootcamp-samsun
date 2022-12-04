@@ -57,18 +57,24 @@ namespace ProductApp.Areas.Admin.Controllers
         {
             // 1. View oluştur
             // 2. İlgili ürünü çekip View Göndermek
+
+            ViewBag.Categories =
+                new SelectList(_context.Categories.ToList(), 
+                "CategoryId", "CategoryName");
+            
             var product = _context
                 .Products
                 .Where(p => p.Id == id)
                 .SingleOrDefault();
-
-            return View(product);
+            var productDto = _mapper.Map<ProductForUpdateDto>(product);
+            return View(productDto);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult UpdateOneProduct(Product product)
+        public IActionResult UpdateOneProduct(ProductForUpdateDto productDto)
         {
+            var product = _mapper.Map<Product>(productDto);
             if (ModelState.IsValid)
             {
                 _context.Products.Update(product);
@@ -76,7 +82,6 @@ namespace ProductApp.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             return View();
-
         }
 
         [HttpPost]
