@@ -18,7 +18,7 @@ namespace Repositories.EFCore
         }
 
         public IEnumerable<Product> GetAllProducts() =>
-             _context.Products.ToList();
+             FindAll();
 
         public IEnumerable<Product> GetAllProducts(ProductRequestParameters p)
         {

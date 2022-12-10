@@ -22,9 +22,11 @@ namespace Repositories.EFCore
            _context.Set<T>().Remove(entity);
         }
 
-        public IEnumerable<T> FindAll()
+        public IEnumerable<T> FindAll(Expression<Func<T, bool>> filter = null)
         {
-            return _context.Set<T>().ToList();
+            return  filter is null ?  
+                _context.Set<T>().ToList() : 
+                _context.Set<T>().Where(filter);
         }
 
         public T FindById(Expression<Func<T, bool>> filter)

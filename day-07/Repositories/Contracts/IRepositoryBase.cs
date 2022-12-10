@@ -6,7 +6,7 @@ namespace Repositories.Contracts
 {
     public interface IRepositoryBase<T>
     {
-        IEnumerable<T> FindAll();
+        IEnumerable<T> FindAll(Expression<Func<T, bool>> filter=null);
         T FindById(Expression<Func<T, bool>> filter);
         void Create(T entity);
         void Update(T entity);

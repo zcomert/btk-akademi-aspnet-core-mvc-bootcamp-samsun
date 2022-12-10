@@ -13,9 +13,8 @@ namespace Repositories.EFCore
         public IEnumerable<Category> GetAllCategories() => FindAll();
         
 
-        public Category GetOneCategoryById(int id)
-        {
-           return FindById(c => c.CategoryId.Equals(id));
-        }
+        public Category GetOneCategoryById(int id) =>       
+            FindById(c => c.CategoryId.Equals(id));
+        
     }
 }
