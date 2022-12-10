@@ -2,19 +2,8 @@
 
 <div class="row">
     <div class="col-md-3">
-
-        <ul class="list-group">
-            @foreach (Category cat in ViewBag.Categories)
-            {
-                <li class="list-group-item">
-                    <a asp-action="GetAllProductsByCategoryId"
-                   asp-route-id="@cat.CategoryId">
-                        @cat.CategoryName
-                    </a>
-                </li>
-
-            }
-        </ul>
+        
+        @await Component.InvokeAsync("Category")
 
         <form method="get"
               asp-action="Index">

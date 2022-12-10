@@ -9,21 +9,14 @@ namespace ProductApp.Controllers
     public class ProductController : Controller
     {
         private readonly IProductRepository _productRepository;
-        private readonly ICategoryRepository _categoryRepository;
-        public ProductController(IProductRepository productRepository, 
-            ICategoryRepository categoryRepository)
+        public ProductController(IProductRepository productRepository)
         {
             _productRepository = productRepository;
-            _categoryRepository = categoryRepository;
         }
 
         public IActionResult Index([FromQuery] ProductRequestParameters p)
         {
-            // Categories al ve View gönder
-            var categories = _categoryRepository.GetAllCategories();
             var products = _productRepository.GetAllProducts(p);
-
-            ViewBag.Categories = categories;
             return View("Index",products);
         }
 
@@ -35,10 +28,6 @@ namespace ProductApp.Controllers
 
         public IActionResult GetAllProductsByCategoryId(int id)
         {
-            // Categories al ve View gönder
-            var categories = _categoryRepository.GetAllCategories();
-            ViewBag.Categories = categories;
-
             var products = _productRepository
                 .GetAllProducts()
                 .Where(p => p.CategoryId.Equals(id))
