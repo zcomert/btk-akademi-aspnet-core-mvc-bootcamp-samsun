@@ -22,7 +22,7 @@ namespace ProductApp.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            var products = _context.Products.ToList();
+            var products = _manager.Product.GetAllProducts();
             TempData["info"] = "Products have been listed.";
             return View(products);
         }
@@ -30,7 +30,7 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult CreateOneProduct()
         {
-            var categories = _context.Categories.ToList();
+            var categories = _manager.Category.GetAllCategories();
             ViewBag.Categories = new SelectList(categories,"CategoryId","CategoryName");
             return View();
         }
@@ -39,14 +39,13 @@ namespace ProductApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult CreateOneProduct(ProductForInsertionDto productDto)
         {
-            
-
             var product = _mapper.Map<Product>(productDto);
 
             if (ModelState.IsValid)
             {
-                _context.Products.Add(product);
-                _context.SaveChanges();
+                _manager.Product.Create(product);
+                _manager.Save();
+                
                 TempData["success"] = "Product has been created";
                 return RedirectToAction("Index");
             }
@@ -56,17 +55,11 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult UpdateOneProduct(int id)
         {
-            // 1. View oluştur
-            // 2. İlgili ürünü çekip View Göndermek
-
             ViewBag.Categories =
-                new SelectList(_context.Categories.ToList(), 
+                new SelectList(_manager.Category.GetAllCategories(), 
                 "CategoryId", "CategoryName");
             
-            var product = _context
-                .Products
-                .Where(p => p.Id == id)
-                .SingleOrDefault();
+            var product = _manager.Product.GetOneProductById(id);
             var productDto = _mapper.Map<ProductForUpdateDto>(product);
             return View(productDto);
         }
@@ -78,8 +71,8 @@ namespace ProductApp.Areas.Admin.Controllers
             var product = _mapper.Map<Product>(productDto);
             if (ModelState.IsValid)
             {
-                _context.Products.Update(product);
-                _context.SaveChanges();
+                _manager.Product.Update(product);
+                _manager.Save();
                 return RedirectToAction("Index");
             }
             return View();
@@ -88,8 +81,8 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult DeleteOneProduct(int id)
         {
-            _context.Products.Remove(new Product() { Id = id });
-            _context.SaveChanges();
+            _manager.Product.Delete(new Product() { Id = id });
+            _manager.Save();
             return RedirectToAction("Index");
         }
 

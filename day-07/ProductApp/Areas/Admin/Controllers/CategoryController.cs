@@ -1,5 +1,6 @@
 ﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Repositories.Contracts;
 using Repositories.EFCore;
 
 namespace ProductApp.Areas.Admin.Controllers
@@ -7,16 +8,16 @@ namespace ProductApp.Areas.Admin.Controllers
     [Area("Admin")]
     public class CategoryController : Controller
     {
-        private readonly RepositoryContext _context;
+        private readonly IRepositoryManager _manager;
 
-        public CategoryController(RepositoryContext context)
+        public CategoryController(IRepositoryManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var categories = _context.Categories.ToList();
+            var categories = _manager.Category.GetAllCategories();  
             return View(categories);
         }
 
@@ -35,8 +36,8 @@ namespace ProductApp.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.Categories.Add(category);
-                _context.SaveChanges();
+                _manager.Category.Create(category);
+                _manager.Save();
                 return RedirectToAction("Index");
             }
             return View();
@@ -45,10 +46,7 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult UpdateOneCategory(int id)
         {
-            var category = _context.Categories
-                .Where(c => c.CategoryId.Equals(id))
-                .FirstOrDefault();
-
+            var category = _manager.Category.GetOneCategoryById(id);
             return View(category);
         }
 
@@ -62,8 +60,8 @@ namespace ProductApp.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.Categories.Update(category);
-                _context.SaveChanges();
+                _manager.Category.Update(category);
+                _manager.Save();
                 return RedirectToAction("Index");
             }
 
@@ -74,8 +72,8 @@ namespace ProductApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteOneCategory(int id)
         {
-            _context.Categories.Remove(new Category { CategoryId = id });
-            _context.SaveChanges();
+            _manager.Category.Delete(new Category { CategoryId = id });
+            _manager.Save();
             return RedirectToAction("Index");
         }
     }
