@@ -12,6 +12,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 
 
 var app = builder.Build();

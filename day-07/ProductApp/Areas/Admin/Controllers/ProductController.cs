@@ -3,6 +3,7 @@ using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Repositories.Contracts;
 using Repositories.EFCore;
 
 namespace ProductApp.Areas.Admin.Controllers
@@ -10,13 +11,13 @@ namespace ProductApp.Areas.Admin.Controllers
     [Area("Admin")]
     public class ProductController : Controller
     {
-        private readonly RepositoryContext _context;
+        private readonly IRepositoryManager _manager;
         private readonly IMapper _mapper;
 
-        public ProductController(RepositoryContext context, IMapper mapper)
+        public ProductController(IRepositoryManager manager, IMapper mapper)
         {
-            _context = context;
             _mapper = mapper;
+            _manager = manager;
         }
 
         public IActionResult Index()

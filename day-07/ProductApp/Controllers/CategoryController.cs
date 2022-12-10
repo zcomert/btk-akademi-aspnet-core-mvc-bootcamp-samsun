@@ -1,26 +1,23 @@
 ﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Repositories.Contracts;
 using Repositories.EFCore;
 
 namespace ProductApp.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly RepositoryContext _context;
+        private readonly IRepositoryManager _manager;
 
-        public CategoryController(RepositoryContext context)
+        public CategoryController(IRepositoryManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var categories = _context.Categories.ToList();
+            var categories = _manager.Category.GetAllCategories();
             return View(categories);
         }
-
-        
-
-       
     }
 }
