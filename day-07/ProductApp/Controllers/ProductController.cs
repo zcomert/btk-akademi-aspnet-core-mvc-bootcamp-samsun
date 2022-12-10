@@ -35,9 +35,14 @@ namespace ProductApp.Controllers
 
         public IActionResult GetAllProductsByCategoryId(int id)
         {
+            // Categories al ve View gönder
+            var categories = _categoryRepository.GetAllCategories();
+            ViewBag.Categories = categories;
+
             var products = _productRepository
                 .GetAllProducts()
-                .Where(p => p.CategoryId.Equals(id));
+                .Where(p => p.CategoryId.Equals(id))
+                .ToList();
 
             return View("Index",products);
         }
