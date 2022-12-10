@@ -29,9 +29,7 @@ namespace ProductApp.Controllers
         public IActionResult GetAllProductsByCategoryId(int id)
         {
             var products = _productRepository
-                .GetAllProducts()
-                .Where(p => p.CategoryId.Equals(id))
-                .ToList();
+                .GetAllProductsByCategoryId(id);
 
             return View("Index",products);
         }

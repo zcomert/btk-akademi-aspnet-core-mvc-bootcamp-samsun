@@ -10,12 +10,11 @@ using System.Threading.Tasks;
 
 namespace Repositories.EFCore
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : RepositoryBase<Product>, IProductRepository
     {
-        private readonly RepositoryContext _context;
-        public ProductRepository(RepositoryContext context)
+        public ProductRepository(RepositoryContext context) 
+            : base(context)
         {
-            _context = context;
         }
 
         public IEnumerable<Product> GetAllProducts() =>
@@ -28,6 +27,13 @@ namespace Repositories.EFCore
                  .FilterProducts(p.MinPrice,p.MaxPrice)
                  .Search(p.SearchTerm)
                  .ToList();
+        }
+
+        public IEnumerable<Product> GetAllProductsByCategoryId(int categoryId)
+        {
+            return _context.Products
+                .Where(p => p.CategoryId.Equals(categoryId))
+                .ToList();
         }
 
         public Product GetOneProductById(int id)

@@ -3,25 +3,19 @@ using Repositories.Contracts;
 
 namespace Repositories.EFCore
 {
-    public class CategoryRepository : ICategoryRepository
+    public class CategoryRepository : RepositoryBase<Category>, ICategoryRepository
     {
-        private readonly RepositoryContext _context;
-
-        public CategoryRepository(RepositoryContext context)
+        public CategoryRepository(RepositoryContext context) : base(context)
         {
-            _context = context;
+            
         }
 
-        public IEnumerable<Category> GetAllCategories()
-        {
-            return _context.Categories.ToList();
-        }
+        public IEnumerable<Category> GetAllCategories() => FindAll();
+        
 
         public Category GetOneCategoryById(int id)
         {
-           return _context.Categories
-                .Where(c => c.CategoryId.Equals(id))
-                .FirstOrDefault();
+           return FindById(c => c.CategoryId.Equals(id));
         }
     }
 }

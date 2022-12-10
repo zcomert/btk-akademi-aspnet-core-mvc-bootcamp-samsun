@@ -64,7 +64,7 @@ ASP.NET Core 6 MVC Eğitimi hoşgeldiniz. Bu Repository altında toplamda 60 saa
 * Roles
 * Authorize
 * UserManager
-* SigInManager
+* SignInManager
 * Registration
 * Authentication
 * Authorization
