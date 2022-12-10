@@ -1,0 +1,22 @@
+﻿@model Product
+
+<div class="text-center">
+    <h1>@Model.ProductName</h1>
+    <span class="bg-danger 
+                badge
+                text-white 
+                m-3
+                p-3">
+        @Model.Price.ToString("c")
+    </span>
+
+    <div>
+        <a 
+            class="btn btn-light"
+            asp-controller="Product"
+            asp-action="Index"
+            >Product List</a>
+    </div>
+   
+
+</div>
