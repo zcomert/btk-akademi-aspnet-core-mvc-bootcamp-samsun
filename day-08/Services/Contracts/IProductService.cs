@@ -11,5 +11,7 @@ namespace Services.Contracts
         IEnumerable<Product> GetAllProducts(ProductRequestParameters p);
         IEnumerable<Product> GetAllProductsByCategoryId(int id);
         Product CreateOneProduct(ProductForInsertionDto productDto);
+        ProductForUpdateDto GetOneProductForUpdate(int id);
+        void UpdateOneProduct(ProductForUpdateDto productDto);
     }
 }

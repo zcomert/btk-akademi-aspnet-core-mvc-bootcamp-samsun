@@ -51,11 +51,10 @@ namespace ProductApp.Areas.Admin.Controllers
         public IActionResult UpdateOneProduct(int id)
         {
             ViewBag.Categories =
-                new SelectList(_manager.Category.GetAllCategories(), 
+                new SelectList(_manager.CategoryService.GetAllCategories(), 
                 "CategoryId", "CategoryName");
             
-            var product = _manager.Product.GetOneProductById(id);
-            var productDto = _mapper.Map<ProductForUpdateDto>(product);
+            var productDto = _manager.ProductService.GetOneProductForUpdate(id);
             return View(productDto);
         }
 
