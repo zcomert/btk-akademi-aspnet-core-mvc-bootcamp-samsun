@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ProductApp.Migrations
 {
-    public partial class init : Migration
+    public partial class setNullCheck : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -43,7 +43,7 @@ namespace ProductApp.Migrations
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "CategoryId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.InsertData(
@@ -64,17 +64,17 @@ namespace ProductApp.Migrations
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "AtCreated", "CategoryId", "Description", "ImageUrl", "Price", "ProductName" },
-                values: new object[] { 1, new DateTime(2022, 12, 11, 14, 46, 5, 731, DateTimeKind.Local).AddTicks(2302), 1, "HP Laptop Touch your Dreams", "/images/products/1.jpg", 15000m, "HP Z Book" });
+                values: new object[] { 1, new DateTime(2022, 12, 11, 14, 59, 29, 459, DateTimeKind.Local).AddTicks(2763), 1, "HP Laptop Touch your Dreams", "/images/products/1.jpg", 15000m, "HP Z Book" });
 
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "AtCreated", "CategoryId", "Description", "ImageUrl", "Price", "ProductName" },
-                values: new object[] { 2, new DateTime(2022, 12, 11, 14, 46, 5, 731, DateTimeKind.Local).AddTicks(2317), 2, "Airpods for your ears", "/images/products/2.jpg", 5000m, "AirPods" });
+                values: new object[] { 2, new DateTime(2022, 12, 11, 14, 59, 29, 459, DateTimeKind.Local).AddTicks(2776), 2, "Airpods for your ears", "/images/products/2.jpg", 5000m, "AirPods" });
 
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "AtCreated", "CategoryId", "Price", "ProductName" },
-                values: new object[] { 3, new DateTime(2022, 12, 11, 14, 46, 5, 731, DateTimeKind.Local).AddTicks(2319), 3, 7000m, "Samsun Galaxy Note FE" });
+                values: new object[] { 3, new DateTime(2022, 12, 11, 14, 59, 29, 459, DateTimeKind.Local).AddTicks(2778), 3, 7000m, "Samsun Galaxy Note FE" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryId",
