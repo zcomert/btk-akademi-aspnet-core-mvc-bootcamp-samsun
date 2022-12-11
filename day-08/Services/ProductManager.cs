@@ -32,6 +32,7 @@ namespace Services
         {
             var product = GetOneProductById(id);
             _manager.Product.Delete(product);
+            _manager.Save();
         }
 
         public IEnumerable<Product> GetAllProducts()
@@ -47,6 +48,11 @@ namespace Services
         public IEnumerable<Product> GetAllProductsByCategoryId(int id)
         {
            return _manager.Product.GetAllProductsByCategoryId(id);
+        }
+
+        public IEnumerable<Product> GetAllProductsWithDetail()
+        {
+            return _manager.Product.GetAllProductsWithDetail();
         }
 
         public Product GetOneProductById(int id)

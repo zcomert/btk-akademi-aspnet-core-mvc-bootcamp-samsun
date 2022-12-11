@@ -17,6 +17,10 @@
         @foreach(Product prd in Model)
         {
             <li class="list-group-item d-flex justify-content-between">@prd.ProductName 
+                
+                     @prd?.Category?.CategoryName
+               
+               
                 <a class="btn btn-warning"
                    asp-area="Admin"
                    asp-controller="Product"

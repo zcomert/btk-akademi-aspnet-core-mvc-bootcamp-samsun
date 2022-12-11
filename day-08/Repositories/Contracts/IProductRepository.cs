@@ -14,5 +14,6 @@ namespace Repositories.Contracts
         Product GetOneProductById(int id);
         IEnumerable<Product> GetAllProducts(ProductRequestParameters p);
         IEnumerable<Product> GetAllProductsByCategoryId(int id);
+        IEnumerable<Product> GetAllProductsWithDetail();
     }
 }

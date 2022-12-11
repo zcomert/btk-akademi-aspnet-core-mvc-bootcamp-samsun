@@ -20,7 +20,17 @@
       "ProjectGuid": "5a6b9f28-0a84-4611-a014-6b01e174ab5e",
       "DisplayName": "Repositories",
       "ColorIndex": 2
+    },
+    "62e8ae52-f100-4b65-9c6d-d19d531ff515": {
+      "ProjectGuid": "62e8ae52-f100-4b65-9c6d-d19d531ff515",
+      "DisplayName": "Services",
+      "ColorIndex": 3
+    },
+    "1dd0cb6b-c6b0-4729-a39d-3d72e4969288": {
+      "ProjectGuid": "1dd0cb6b-c6b0-4729-a39d-3d72e4969288",
+      "DisplayName": "Services",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 5
 }
