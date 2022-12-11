@@ -1,20 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Repositories.Contracts;
+using Services.Contracts;
 
 namespace ProductApp.ViewComponents
 {
     public class CategoryViewComponent : ViewComponent
     {
-        private readonly ICategoryRepository _categoryRepository;
+        private readonly ICategoryService _categoryService;
 
-        public CategoryViewComponent(ICategoryRepository categoryRepository)
+        public CategoryViewComponent(ICategoryService categoryService)
         {
-            _categoryRepository = categoryRepository;
+            _categoryService = categoryService;
         }
 
         public IViewComponentResult Invoke()
         {
-            var categories = _categoryRepository.GetAllCategories();
+            var categories = _categoryService.GetAllCategories();
             return View(categories);
         }
     }

@@ -2,21 +2,22 @@
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Contracts;
 using Repositories.EFCore;
+using Services.Contracts;
 
 namespace ProductApp.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly IRepositoryManager _manager;
+        private readonly ICategoryService _categoryService;
 
-        public CategoryController(IRepositoryManager manager)
+        public CategoryController(ICategoryService categoryService)
         {
-            _manager = manager;
+            _categoryService = categoryService;
         }
 
         public IActionResult Index()
         {
-            var categories = _manager.Category.GetAllCategories();
+            var categories = _categoryService.GetAllCategories();
             return View(categories);
         }
     }
