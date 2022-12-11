@@ -5,24 +5,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Repositories.Contracts;
 using Repositories.EFCore;
+using Services.Contracts;
 
 namespace ProductApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class ProductController : Controller
     {
-        private readonly IRepositoryManager _manager;
-        private readonly IMapper _mapper;
-
-        public ProductController(IRepositoryManager manager, IMapper mapper)
+        private readonly IServiceManager _manager;
+        public ProductController(IServiceManager manager)
         {
-            _mapper = mapper;
             _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var products = _manager.Product.GetAllProducts();
+            var products = _manager.ProductService.GetAllProducts();
             TempData["info"] = "Products have been listed.";
             return View(products);
         }
@@ -30,7 +28,7 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult CreateOneProduct()
         {
-            var categories = _manager.Category.GetAllCategories();
+            var categories = _manager.CategoryService.GetAllCategories();
             ViewBag.Categories = new SelectList(categories,"CategoryId","CategoryName");
             return View();
         }
@@ -39,13 +37,10 @@ namespace ProductApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult CreateOneProduct(ProductForInsertionDto productDto)
         {
-            var product = _mapper.Map<Product>(productDto);
-
+           
             if (ModelState.IsValid)
             {
-                _manager.Product.Create(product);
-                _manager.Save();
-                
+                _manager.ProductService.CreateOneProduct(productDto);
                 TempData["success"] = "Product has been created";
                 return RedirectToAction("Index");
             }

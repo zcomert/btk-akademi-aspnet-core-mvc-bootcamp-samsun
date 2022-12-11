@@ -1,17 +1,31 @@
-﻿using Entities.Models;
+﻿
+
+using AutoMapper;
+using Entities.DataTransferObjects;
+using Entities.Models;
 using Entities.RequestParameters;
-using Services.Contracts;
 using Repositories.Contracts;
+using Services.Contracts;
 
 namespace Services
 {
     public class ProductManager : IProductService
     {
         private readonly IRepositoryManager _manager;
+        private readonly IMapper _mapper;
 
-        public ProductManager(IRepositoryManager manager)
+        public ProductManager(IRepositoryManager manager, IMapper mapper)
         {
             _manager = manager;
+            _mapper = mapper;
+        }
+
+        public Product CreateOneProduct(ProductForInsertionDto productDto)
+        {
+            var product = _mapper.Map<Product>(productDto);
+            _manager.Product.Create(product);
+            _manager.Save();
+            return product;
         }
 
         public IEnumerable<Product> GetAllProducts()

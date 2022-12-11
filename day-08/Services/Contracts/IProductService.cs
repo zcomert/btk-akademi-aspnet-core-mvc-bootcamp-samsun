@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.DataTransferObjects;
+using Entities.Models;
 using Entities.RequestParameters;
 
 namespace Services.Contracts
@@ -9,5 +10,6 @@ namespace Services.Contracts
         Product GetOneProductById(int id);
         IEnumerable<Product> GetAllProducts(ProductRequestParameters p);
         IEnumerable<Product> GetAllProductsByCategoryId(int id);
+        Product CreateOneProduct(ProductForInsertionDto productDto);
     }
 }
