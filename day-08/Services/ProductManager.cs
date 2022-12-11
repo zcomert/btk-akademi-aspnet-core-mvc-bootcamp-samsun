@@ -28,6 +28,12 @@ namespace Services
             return product;
         }
 
+        public void DeleteOneProduct(int id)
+        {
+            var product = GetOneProductById(id);
+            _manager.Product.Delete(product);
+        }
+
         public IEnumerable<Product> GetAllProducts()
         {
             return _manager.Product.GetAllProducts();

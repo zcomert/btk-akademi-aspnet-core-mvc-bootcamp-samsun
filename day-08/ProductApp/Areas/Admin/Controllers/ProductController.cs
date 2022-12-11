@@ -62,11 +62,9 @@ namespace ProductApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult UpdateOneProduct(ProductForUpdateDto productDto)
         {
-            var product = _mapper.Map<Product>(productDto);
             if (ModelState.IsValid)
             {
-                _manager.Product.Update(product);
-                _manager.Save();
+                _manager.ProductService.UpdateOneProduct(productDto);
                 return RedirectToAction("Index");
             }
             return View();
@@ -75,8 +73,7 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult DeleteOneProduct(int id)
         {
-            _manager.Product.Delete(new Product() { Id = id });
-            _manager.Save();
+            _manager.ProductService.DeleteOneProduct(id);
             return RedirectToAction("Index");
         }
 
