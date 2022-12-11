@@ -2,22 +2,23 @@
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Contracts;
 using Repositories.EFCore;
+using Services.Contracts;
 
 namespace ProductApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CategoryController : Controller
     {
-        private readonly IRepositoryManager _manager;
+        private readonly IServiceManager _manager;
 
-        public CategoryController(IRepositoryManager manager)
+        public CategoryController(IServiceManager manager)
         {
             _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var categories = _manager.Category.GetAllCategories();  
+            var categories = _manager.CategoryService.GetAllCategories();  
             return View(categories);
         }
 
@@ -36,8 +37,7 @@ namespace ProductApp.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _manager.Category.Create(category);
-                _manager.Save();
+                _manager.CategoryService.CreateOneCategory(category);
                 return RedirectToAction("Index");
             }
             return View();

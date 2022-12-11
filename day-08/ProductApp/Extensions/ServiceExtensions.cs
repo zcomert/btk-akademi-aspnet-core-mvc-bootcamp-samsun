@@ -26,6 +26,7 @@ namespace ProductApp.Extensions
 
         public static void RegisterServices(this IServiceCollection services)
         {
+            services.AddScoped<IServiceManager, ServiceManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IProductService, ProductManager>();
         }

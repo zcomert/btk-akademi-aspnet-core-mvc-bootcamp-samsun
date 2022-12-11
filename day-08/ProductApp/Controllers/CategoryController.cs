@@ -8,16 +8,16 @@ namespace ProductApp.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ICategoryService _categoryService;
+        private readonly IServiceManager _manager;
 
-        public CategoryController(ICategoryService categoryService)
+        public CategoryController(IServiceManager manager)
         {
-            _categoryService = categoryService;
+            _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var categories = _categoryService.GetAllCategories();
+            var categories = _manager.CategoryService.GetAllCategories();
             return View(categories);
         }
     }

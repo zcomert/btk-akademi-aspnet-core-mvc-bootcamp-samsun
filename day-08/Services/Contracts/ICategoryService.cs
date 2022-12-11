@@ -11,5 +11,6 @@ namespace Services.Contracts
     {
         IEnumerable<Category> GetAllCategories();
         Category GetOneCategoryById(int id);
+        Category CreateOneCategory(Category category);
     }
 }

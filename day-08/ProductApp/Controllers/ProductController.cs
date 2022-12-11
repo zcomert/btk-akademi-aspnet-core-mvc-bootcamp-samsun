@@ -9,28 +9,29 @@ namespace ProductApp.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly IProductService _productService;
+        private readonly IServiceManager _manager;
 
-        public ProductController(IProductService productService)
+        public ProductController(IServiceManager manager)
         {
-            _productService = productService;
+            _manager = manager;
         }
 
         public IActionResult Index([FromQuery] ProductRequestParameters p)
         {
-            var products = _productService.GetAllProducts(p);
+            var products = _manager.ProductService.GetAllProducts(p);
             return View("Index",products);
         }
 
         public IActionResult GetOneProduct(int id)
         {
-            var product = _productService.GetOneProductById(id);
+            var product = _manager.ProductService.GetOneProductById(id);
             return View("GetOneProduct", product);
         }
 
         public IActionResult GetAllProductsByCategoryId(int id)
         {
-            var products =_productService
+            var products = _manager
+                .ProductService
                 .GetAllProductsByCategoryId(id);
 
             return View("Index",products);
