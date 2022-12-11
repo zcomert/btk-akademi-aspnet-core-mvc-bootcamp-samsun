@@ -26,6 +26,11 @@ namespace Repositories.EFCore.Config
 
             builder.Property(p => p.Description).HasDefaultValue("...");
 
+            builder.HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             builder.HasData(
                 new Product()
                 {

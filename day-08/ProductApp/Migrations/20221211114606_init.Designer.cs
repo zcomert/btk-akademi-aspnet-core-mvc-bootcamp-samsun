@@ -12,8 +12,8 @@ using Repositories.EFCore;
 namespace ProductApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20221204073641_startpoint")]
-    partial class startpoint
+    [Migration("20221211114606_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -101,7 +101,7 @@ namespace ProductApp.Migrations
                         new
                         {
                             Id = 1,
-                            AtCreated = new DateTime(2022, 12, 4, 10, 36, 41, 419, DateTimeKind.Local).AddTicks(107),
+                            AtCreated = new DateTime(2022, 12, 11, 14, 46, 5, 731, DateTimeKind.Local).AddTicks(2302),
                             CategoryId = 1,
                             Description = "HP Laptop Touch your Dreams",
                             ImageUrl = "/images/products/1.jpg",
@@ -111,7 +111,7 @@ namespace ProductApp.Migrations
                         new
                         {
                             Id = 2,
-                            AtCreated = new DateTime(2022, 12, 4, 10, 36, 41, 419, DateTimeKind.Local).AddTicks(124),
+                            AtCreated = new DateTime(2022, 12, 11, 14, 46, 5, 731, DateTimeKind.Local).AddTicks(2317),
                             CategoryId = 2,
                             Description = "Airpods for your ears",
                             ImageUrl = "/images/products/2.jpg",
@@ -121,7 +121,7 @@ namespace ProductApp.Migrations
                         new
                         {
                             Id = 3,
-                            AtCreated = new DateTime(2022, 12, 4, 10, 36, 41, 419, DateTimeKind.Local).AddTicks(126),
+                            AtCreated = new DateTime(2022, 12, 11, 14, 46, 5, 731, DateTimeKind.Local).AddTicks(2319),
                             CategoryId = 3,
                             Price = 7000m,
                             ProductName = "Samsun Galaxy Note FE"
@@ -132,7 +132,8 @@ namespace ProductApp.Migrations
                 {
                     b.HasOne("Entities.Models.Category", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Category");
                 });

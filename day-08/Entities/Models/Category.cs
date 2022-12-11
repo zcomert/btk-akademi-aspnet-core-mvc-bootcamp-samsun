@@ -11,6 +11,6 @@ namespace Entities.Models
         public String? CategoryName { get; set; }
 
         // Collection navigation property
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Product>? Products { get; set; }
     }
 }

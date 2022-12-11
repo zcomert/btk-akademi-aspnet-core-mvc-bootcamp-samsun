@@ -31,7 +31,10 @@ namespace Services
 
         public Product GetOneProductById(int id)
         {
-            return _manager.Product.GetOneProductById(id);
+            var product = _manager.Product.GetOneProductById(id);
+            if (product is null)
+                throw new Exception();
+            return product;
         }
     }
 }
