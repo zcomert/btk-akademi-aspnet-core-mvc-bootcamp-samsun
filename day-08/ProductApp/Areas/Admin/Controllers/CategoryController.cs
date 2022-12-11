@@ -46,7 +46,10 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult UpdateOneCategory(int id)
         {
-            var category = _manager.Category.GetOneCategoryById(id);
+            var category = _manager
+                .CategoryService
+                .GetOneCategoryById(id);
+            
             return View(category);
         }
 
@@ -60,8 +63,9 @@ namespace ProductApp.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _manager.Category.Update(category);
-                _manager.Save();
+                _manager.CategoryService.UpdateOneCategory(category);
+                //_manager.Category.Update(category);
+                //_manager.Save();
                 return RedirectToAction("Index");
             }
 
@@ -72,8 +76,7 @@ namespace ProductApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteOneCategory(int id)
         {
-            _manager.Category.Delete(new Category { CategoryId = id });
-            _manager.Save();
+            _manager.CategoryService.DeleteOneCategory(id);
             return RedirectToAction("Index");
         }
     }

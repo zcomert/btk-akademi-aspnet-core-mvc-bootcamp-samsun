@@ -12,5 +12,7 @@ namespace Services.Contracts
         IEnumerable<Category> GetAllCategories();
         Category GetOneCategoryById(int id);
         Category CreateOneCategory(Category category);
+        void UpdateOneCategory(Category category);
+        void DeleteOneCategory(int id);
     }
 }
