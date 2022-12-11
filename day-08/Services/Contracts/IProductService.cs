@@ -1,0 +1,13 @@
+﻿using Entities.Models;
+using Entities.RequestParameters;
+
+namespace Services.Contracts
+{
+    public interface IProductService
+    {
+        IEnumerable<Product> GetAllProducts();
+        Product GetOneProductById(int id);
+        IEnumerable<Product> GetAllProducts(ProductRequestParameters p);
+        IEnumerable<Product> GetAllProductsByCategoryId(int id);
+    }
+}

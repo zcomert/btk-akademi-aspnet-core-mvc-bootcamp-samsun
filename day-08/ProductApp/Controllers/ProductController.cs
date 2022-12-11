@@ -10,7 +10,7 @@ namespace ProductApp.Controllers
     {
         private readonly IRepositoryManager _manager;
 
-        public ProductController(IRepositoryManager manager)
+        public ProductController()
         {
             _manager = manager;
         }
