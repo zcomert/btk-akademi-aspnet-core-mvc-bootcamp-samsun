@@ -1,0 +1,78 @@
+﻿@model List<Product>
+
+<div class="row">
+    <div class="col-md-3">
+        
+        @await Component.InvokeAsync("Category")
+
+        <form method="get"
+              asp-action="Index">
+            <div class="form-group my-3">
+                <input class="form-control" name="MinPrice" placeholder="Min. price" />
+            </div>
+
+            <div class="form-group my-3">
+                <input class="form-control" name="MaxPrice" placeholder="Max. price" />
+            </div>
+
+            <div class="form-group my-3">
+                <input class="form-control" name="SearchTerm" placeholder="Search Term" />
+            </div>
+
+            <div class="form-group my-3">
+                <button type="submit" class="btn-primary btn">Apply</button>
+            </div>
+        </form>
+
+
+    </div>
+    <div class="col-md-9">
+        <div class="row">
+            @foreach (var prd in Model)
+            {
+                <div class="col-md-4 my-2">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top"
+                         src="@prd.ImageUrl"
+                         alt="@prd.ProductName">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-8"><h5>@prd.ProductName</h5></div>
+                                <div class="col-4 text-primary">@prd.Price</div>
+                            </div>
+                            <p class="card-text">
+                                @prd.Description
+                            </p>
+                            <p class="text-info">
+                                @prd.AtCreated.Value.ToString("d")
+                            </p>
+                            <a asp-controller="Product"
+                           asp-action="GetOneProduct"
+                           asp-route-id="@prd.Id"
+                           class="btn btn-primary">Get Details</a>
+
+                            <a asp-controller="Product"
+                           asp-action="UpdateOneProduct"
+                           asp-route-id="@prd.Id"
+                           class="btn btn-warning">Update</a>
+
+                            <form method="post"
+                              asp-action="DeleteOneProduct"
+                              asp-controller="Product"
+                              asp-route-id="@prd.Id">
+                                <button type="submit"
+                                    class="btn btn-danger">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,17 @@
+D:\dotnetmvcbootcamp\day-08\Services\bin\Debug\net6.0\Services.deps.json
+D:\dotnetmvcbootcamp\day-08\Services\bin\Debug\net6.0\Services.dll
+D:\dotnetmvcbootcamp\day-08\Services\bin\Debug\net6.0\ref\Services.dll
+D:\dotnetmvcbootcamp\day-08\Services\bin\Debug\net6.0\Services.pdb
+D:\dotnetmvcbootcamp\day-08\Services\bin\Debug\net6.0\Entities.dll
+D:\dotnetmvcbootcamp\day-08\Services\bin\Debug\net6.0\Repositories.dll
+D:\dotnetmvcbootcamp\day-08\Services\bin\Debug\net6.0\Entities.pdb
+D:\dotnetmvcbootcamp\day-08\Services\bin\Debug\net6.0\Repositories.pdb
+D:\dotnetmvcbootcamp\day-08\Services\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+D:\dotnetmvcbootcamp\day-08\Services\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnetmvcbootcamp\day-08\Services\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+D:\dotnetmvcbootcamp\day-08\Services\obj\Debug\net6.0\Services.AssemblyInfo.cs
+D:\dotnetmvcbootcamp\day-08\Services\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+D:\dotnetmvcbootcamp\day-08\Services\obj\Debug\net6.0\Services.csproj.CopyComplete
+D:\dotnetmvcbootcamp\day-08\Services\obj\Debug\net6.0\Services.dll
+D:\dotnetmvcbootcamp\day-08\Services\obj\Debug\net6.0\ref\Services.dll
+D:\dotnetmvcbootcamp\day-08\Services\obj\Debug\net6.0\Services.pdb
