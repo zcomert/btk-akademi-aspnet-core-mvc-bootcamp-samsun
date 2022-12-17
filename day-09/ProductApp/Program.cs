@@ -14,6 +14,8 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.RegisterRepositories();
 builder.Services.RegisterServices();
 
+builder.Services.ConfigureIdentity();
+
 
 
 var app = builder.Build();
@@ -31,6 +33,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints=>

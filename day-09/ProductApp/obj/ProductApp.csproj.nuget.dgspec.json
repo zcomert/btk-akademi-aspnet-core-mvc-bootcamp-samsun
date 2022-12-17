@@ -115,6 +115,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.11, )"
             }
           },
           "imports": [
