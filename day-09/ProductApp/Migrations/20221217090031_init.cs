@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ProductApp.Migrations
 {
-    public partial class identity : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,6 +48,19 @@ namespace ProductApp.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Categories",
+                columns: table => new
+                {
+                    CategoryId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CategoryName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categories", x => x.CategoryId);
                 });
 
             migrationBuilder.CreateTable(
@@ -156,26 +169,64 @@ namespace ProductApp.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 1,
-                column: "AtCreated",
-                value: new DateTime(2022, 12, 17, 11, 19, 1, 878, DateTimeKind.Local).AddTicks(6126));
+            migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true, defaultValue: "/images/products/default.jpg"),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true, defaultValue: "..."),
+                    AtCreated = table.Column<DateTime>(type: "datetime2", nullable: true, defaultValueSql: "GETDATE()"),
+                    CategoryId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Products_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "CategoryId",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 2,
-                column: "AtCreated",
-                value: new DateTime(2022, 12, 17, 11, 19, 1, 878, DateTimeKind.Local).AddTicks(6193));
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "4ff589a4-e774-46a0-a38a-526928799214", "3899316d-498f-4b83-9486-0ea0a2ccd654", "editor", null },
+                    { "81ec2092-cef6-4790-8332-7a444593cc65", "f79b5fef-758c-4a08-b647-888642247d4c", "user", null },
+                    { "d5653a32-2edb-4d8b-b663-506e12affb03", "5cda68e5-ce7b-4137-8cfd-819a29906c06", "admin", null }
+                });
 
-            migrationBuilder.UpdateData(
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoryId", "CategoryName" },
+                values: new object[,]
+                {
+                    { 1, "Computer" },
+                    { 2, "Electronic" },
+                    { 3, "Smart Phones" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Products",
-                keyColumn: "Id",
-                keyValue: 3,
-                column: "AtCreated",
-                value: new DateTime(2022, 12, 17, 11, 19, 1, 878, DateTimeKind.Local).AddTicks(6195));
+                columns: new[] { "Id", "AtCreated", "CategoryId", "Description", "ImageUrl", "Price", "ProductName" },
+                values: new object[] { 1, new DateTime(2022, 12, 17, 12, 0, 31, 676, DateTimeKind.Local).AddTicks(6741), 1, "HP Laptop Touch your Dreams", "/images/products/1.jpg", 15000m, "HP Z Book" });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "AtCreated", "CategoryId", "Description", "ImageUrl", "Price", "ProductName" },
+                values: new object[] { 2, new DateTime(2022, 12, 17, 12, 0, 31, 676, DateTimeKind.Local).AddTicks(6755), 2, "Airpods for your ears", "/images/products/2.jpg", 5000m, "AirPods" });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "AtCreated", "CategoryId", "Price", "ProductName" },
+                values: new object[] { 3, new DateTime(2022, 12, 17, 12, 0, 31, 676, DateTimeKind.Local).AddTicks(6756), 3, 7000m, "Samsun Galaxy Note FE" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -215,6 +266,11 @@ namespace ProductApp.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CategoryId",
+                table: "Products",
+                column: "CategoryId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -235,31 +291,16 @@ namespace ProductApp.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Products");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
 
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 1,
-                column: "AtCreated",
-                value: new DateTime(2022, 12, 11, 15, 3, 36, 718, DateTimeKind.Local).AddTicks(1632));
-
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 2,
-                column: "AtCreated",
-                value: new DateTime(2022, 12, 11, 15, 3, 36, 718, DateTimeKind.Local).AddTicks(1648));
-
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 3,
-                column: "AtCreated",
-                value: new DateTime(2022, 12, 11, 15, 3, 36, 718, DateTimeKind.Local).AddTicks(1650));
+            migrationBuilder.DropTable(
+                name: "Categories");
         }
     }
 }
