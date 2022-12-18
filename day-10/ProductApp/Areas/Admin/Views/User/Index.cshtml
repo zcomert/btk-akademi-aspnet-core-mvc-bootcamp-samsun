@@ -4,9 +4,9 @@
 <ul class="list-group">
     @foreach (var user in Model)
     {
-        <li class="list-group-item">
+        <li class="list-group-item d-flex justify-content-between ">
             @user.FirstName @user.LastName
-            <b>(@user.UserName)</b>
+            (@user.UserName)
 
             <a class="btn btn-outline-danger"
            asp-action="AddRoleToUser"
