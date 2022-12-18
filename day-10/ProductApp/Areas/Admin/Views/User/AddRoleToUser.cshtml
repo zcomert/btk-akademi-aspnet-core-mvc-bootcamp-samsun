@@ -1,7 +1,14 @@
-﻿@model ApplicationUser
+﻿@using Microsoft.AspNetCore.Identity
+@model ApplicationUser
+@inject UserManager<ApplicationUser> UserManager
 
 <h1>User Roles</h1>
 
-Admin - False
-Editor - False
-User - True
+<ul class="list-group">
+    @foreach(IdentityRole role in ViewBag.RoleList)
+    {
+        <li class="list-group-item">@role.Name -
+            @await UserManager.IsInRoleAsync(Model,role.Name)
+        </li>
+    }
+</ul>
