@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ApplicationUser>
+
+<h1>Users</h1>
+<ul class="list-group">
+    @foreach (var user in Model)
+    {
+        <li class="list-group-item d-flex justify-content-between ">
+            @user.FirstName @user.LastName
+            (@user.UserName)
+
+            <a class="btn btn-outline-danger"
+           asp-action="AddRoleToUser"
+           asp-controller="User"
+           asp-route-id="@user.UserName">Roles</a>
+        </li>
+    }
+</ul>

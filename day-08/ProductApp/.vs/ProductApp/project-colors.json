@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1492e7cc-608c-416a-8aa9-2a33f768f214": {
+      "ProjectGuid": "1492e7cc-608c-416a-8aa9-2a33f768f214",
+      "DisplayName": "ProductApp",
+      "ColorIndex": 0
+    },
+    "a698d3cc-46f4-4ef2-9752-b7be7826366e": {
+      "ProjectGuid": "a698d3cc-46f4-4ef2-9752-b7be7826366e",
+      "DisplayName": "Entities",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "5a6b9f28-0a84-4611-a014-6b01e174ab5e": {
+      "ProjectGuid": "5a6b9f28-0a84-4611-a014-6b01e174ab5e",
+      "DisplayName": "Repositories",
+      "ColorIndex": 2
+    },
+    "62e8ae52-f100-4b65-9c6d-d19d531ff515": {
+      "ProjectGuid": "62e8ae52-f100-4b65-9c6d-d19d531ff515",
+      "DisplayName": "Services",
+      "ColorIndex": 3
+    },
+    "1dd0cb6b-c6b0-4729-a39d-3d72e4969288": {
+      "ProjectGuid": "1dd0cb6b-c6b0-4729-a39d-3d72e4969288",
+      "DisplayName": "Services",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

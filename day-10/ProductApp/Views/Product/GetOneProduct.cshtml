@@ -1,0 +1,27 @@
+﻿@model Product
+
+<div class="text-center">
+    <h1>@Model.ProductName</h1>
+    <div>
+        <img class="img-fluid rounded-2" 
+        alt="@Model.ProductName"
+        src="@Model.ImageUrl" />
+    </div>
+    <span class="bg-danger 
+                badge
+                text-white 
+                m-3
+                p-3">
+        @Model.Price.ToString("c")
+    </span>
+
+    <div>
+        <a 
+            class="btn btn-light"
+            asp-controller="Product"
+            asp-action="Index"
+            >Product List</a>
+    </div>
+   
+
+</div>

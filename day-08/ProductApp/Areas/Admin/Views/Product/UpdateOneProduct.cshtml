@@ -1,0 +1,62 @@
+﻿@model ProductForUpdateDto
+
+<div class="d-flex justify-content-end">
+    <form method="post"
+          asp-action="DeleteOneProduct">
+        <input type="hidden" asp-for="Id" />
+        <button class="btn btn-danger" type="submit">Delete</button>
+        <a asp-action="Index" class="btn btn-outline-primary">Product List</a>
+    </form>
+</div>
+
+<form method="post"
+      asp-action="UpdateOneProduct"
+      asp-controller="Product">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <select 
+        class="form-control"
+        asp-for="CategoryId" 
+        asp-items="@ViewBag.Categories"></select>
+    </div>
+
+    <div class="form-group my-3">
+        <input type="text"
+               asp-for="ProductName"
+               id="ProductName"
+               placeholder="Product Name"
+               class="form-control" />
+        <span class="text-danger" asp-validation-for="ProductName"></span>
+    </div>
+
+    <div class="form-group my-3">
+        <input type="text"
+               asp-for="Price"
+               id="Price"
+               placeholder="Price"
+               class="form-control" />
+    </div>
+
+    <div class="form-group my-3">
+        <input type="text"
+               asp-for="Description"
+               id="Description"
+               placeholder="Description"
+               class="form-control" />
+    </div>
+
+    <div class="form-group my-3">
+        <input type="text"
+               asp-for="ImageUrl"
+               id="ImageUrl"
+               placeholder="ImageUrl"
+               class="form-control" />
+    </div>
+
+    <button type="submit"
+            class="btn-primary btn">
+        Update
+    </button>
+</form>

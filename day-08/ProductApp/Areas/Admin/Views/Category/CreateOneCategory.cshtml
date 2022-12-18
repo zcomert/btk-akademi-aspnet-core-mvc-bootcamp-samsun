@@ -1,0 +1,19 @@
+﻿@model Category
+
+<form
+    method="post"
+    asp-action="CreateOneCategory"
+    asp-controller="Category"
+>
+    <div class="text-danger" asp-validation-summary="All"></div>
+    
+    <div class="form-group my-3">
+        <input 
+        type="text"
+        asp-for="CategoryName"
+        placeholder="Category Name"
+        class="form-control" />
+    </div>
+    <button class="btn btn-primary" type="submit">Create Category</button>
+
+</form>
