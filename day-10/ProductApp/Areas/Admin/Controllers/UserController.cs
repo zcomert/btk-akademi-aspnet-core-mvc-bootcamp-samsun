@@ -40,8 +40,13 @@ namespace ProductApp.Areas.Admin.Controllers
             var selectedRole = await _roleManager.FindByIdAsync(role);
             var selectedUser = await _userManager.FindByNameAsync(username);
             var flag = await _userManager.IsInRoleAsync(selectedUser, selectedRole.Name);
+            if(flag)
+            {
+                await _userManager.RemoveFromRoleAsync(selectedUser, selectedRole.Name);
+                return RedirectToAction("Index");
+            }
 
-            if (selectedRole is not null && selectedUser is not null && !flag)
+            if (selectedRole is not null && selectedUser is not null)
             {
                 var result = await _userManager
                     .AddToRoleAsync(selectedUser, selectedRole.Name);
