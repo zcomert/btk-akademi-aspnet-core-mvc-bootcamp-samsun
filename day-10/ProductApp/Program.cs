@@ -15,6 +15,7 @@ builder.Services.RegisterRepositories();
 builder.Services.RegisterServices();
 
 builder.Services.ConfigureIdentity();
+builder.Services.ConfigureApplicationCookie();
 
 
 

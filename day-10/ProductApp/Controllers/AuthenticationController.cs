@@ -73,7 +73,9 @@ namespace ProductApp.Controllers
                 
                 if(result.Succeeded)
                 {
-                    return RedirectToAction("Login");
+                    var rst = await _userManager.AddToRoleAsync(applicationUser, "User");
+                    if(rst.Succeeded)
+                        return RedirectToAction("Login");
                 }
                 else
                 {

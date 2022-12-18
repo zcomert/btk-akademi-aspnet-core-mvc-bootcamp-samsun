@@ -1,5 +1,6 @@
 ﻿using Entities.Models;
 using Entities.RequestParameters;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Contracts;
 using Repositories.EFCore;
@@ -7,6 +8,7 @@ using Services.Contracts;
 
 namespace ProductApp.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly IServiceManager _manager;

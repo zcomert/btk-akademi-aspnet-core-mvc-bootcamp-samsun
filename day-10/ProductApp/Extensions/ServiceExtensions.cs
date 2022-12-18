@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
@@ -47,5 +48,16 @@ namespace ProductApp.Extensions
             })
             .AddEntityFrameworkStores<RepositoryContext>();
         }
+
+        public static void ConfigureApplicationCookie(this IServiceCollection services)
+        {
+            services.ConfigureApplicationCookie(options => 
+            {
+                options.LoginPath = new PathString("/Authentication/Login");
+                options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+            });
+        }
+
     }
 }
