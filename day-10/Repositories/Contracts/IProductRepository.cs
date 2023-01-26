@@ -10,6 +10,7 @@ namespace Repositories.Contracts
 {
     public interface IProductRepository : IRepositoryBase<Product>
     {
+        IEnumerable<Product> Product { get; }
         IEnumerable<Product> GetAllProducts();
         Product GetOneProductById(int id);
         IEnumerable<Product> GetAllProducts(ProductRequestParameters p);

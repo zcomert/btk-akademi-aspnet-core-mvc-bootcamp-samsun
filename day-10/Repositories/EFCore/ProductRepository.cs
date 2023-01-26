@@ -18,6 +18,8 @@ namespace Repositories.EFCore
         {
         }
 
+        public IEnumerable<Product> Product => GetAllProducts();
+
         public IEnumerable<Product> GetAllProducts() =>
              FindAll();
 
