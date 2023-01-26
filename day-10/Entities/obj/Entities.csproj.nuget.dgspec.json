@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj": {}
+    "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj": {
+    "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj",
+        "projectUniqueName": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj",
+        "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnetmvcbootcamp\\day-10\\Entities\\obj\\",
+        "outputPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,7 +42,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -51,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -60,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.112\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

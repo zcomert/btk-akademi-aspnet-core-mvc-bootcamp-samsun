@@ -82,3 +82,15 @@ D:\dotnetmvcbootcamp\day-10\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompil
 D:\dotnetmvcbootcamp\day-10\Entities\obj\Debug\net6.0\Entities.dll
 D:\dotnetmvcbootcamp\day-10\Entities\obj\Debug\net6.0\ref\Entities.dll
 D:\dotnetmvcbootcamp\day-10\Entities\obj\Debug\net6.0\Entities.pdb
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\obj\Debug\net6.0\Entities.dll
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\obj\Debug\net6.0\refint\Entities.dll
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\obj\Debug\net6.0\Entities.pdb
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\bin\Debug\net6.0\Entities.deps.json
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\bin\Debug\net6.0\Entities.dll
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\bin\Debug\net6.0\Entities.pdb
+F:\Courses\AspDotnetCoreMVC\GitHub\day-10\Entities\obj\Debug\net6.0\ref\Entities.dll

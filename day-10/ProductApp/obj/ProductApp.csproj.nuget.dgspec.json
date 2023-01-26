@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnetmvcbootcamp\\day-10\\ProductApp\\ProductApp.csproj": {}
+    "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\ProductApp\\ProductApp.csproj": {}
   },
   "projects": {
-    "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj": {
+    "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj",
+        "projectUniqueName": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj",
+        "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnetmvcbootcamp\\day-10\\Entities\\obj\\",
+        "outputPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,7 +42,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -51,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -60,18 +61,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.112\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\dotnetmvcbootcamp\\day-10\\ProductApp\\ProductApp.csproj": {
+    "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\ProductApp\\ProductApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnetmvcbootcamp\\day-10\\ProductApp\\ProductApp.csproj",
+        "projectUniqueName": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\ProductApp\\ProductApp.csproj",
         "projectName": "ProductApp",
-        "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\ProductApp\\ProductApp.csproj",
+        "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\ProductApp\\ProductApp.csproj",
         "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnetmvcbootcamp\\day-10\\ProductApp\\obj\\",
+        "outputPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\ProductApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -88,14 +89,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj"
+              "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj": {
+                "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj"
               },
-              "D:\\dotnetmvcbootcamp\\day-10\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Repositories\\Repositories.csproj"
+              "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Repositories\\Repositories.csproj": {
+                "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Repositories\\Repositories.csproj"
               },
-              "D:\\dotnetmvcbootcamp\\day-10\\Services\\Services.csproj": {
-                "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Services\\Services.csproj"
+              "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Services\\Services.csproj": {
+                "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Services\\Services.csproj"
               }
             }
           }
@@ -114,7 +115,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -127,7 +128,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -139,18 +141,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.112\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\dotnetmvcbootcamp\\day-10\\Repositories\\Repositories.csproj": {
+    "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnetmvcbootcamp\\day-10\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Repositories\\Repositories.csproj",
+        "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnetmvcbootcamp\\day-10\\Repositories\\obj\\",
+        "outputPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -167,8 +169,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj"
+              "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj": {
+                "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj"
               }
             }
           }
@@ -185,17 +187,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -204,7 +206,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -213,18 +216,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.112\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\dotnetmvcbootcamp\\day-10\\Services\\Services.csproj": {
+    "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnetmvcbootcamp\\day-10\\Services\\Services.csproj",
+        "projectUniqueName": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Services\\Services.csproj",
+        "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnetmvcbootcamp\\day-10\\Services\\obj\\",
+        "outputPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -241,11 +244,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Entities\\Entities.csproj"
+              "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj": {
+                "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Entities\\Entities.csproj"
               },
-              "D:\\dotnetmvcbootcamp\\day-10\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\dotnetmvcbootcamp\\day-10\\Repositories\\Repositories.csproj"
+              "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Repositories\\Repositories.csproj": {
+                "projectPath": "F:\\Courses\\AspDotnetCoreMVC\\GitHub\\day-10\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -271,7 +274,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -280,7 +284,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.112\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
